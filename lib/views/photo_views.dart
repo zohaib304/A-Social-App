@@ -10,8 +10,8 @@ Future<List<PhotosModel>> getPhotos() async {
   if (response.statusCode == 200) {
     // ..OK response
     // then parse the JSON
-    final List<PhotosModel> posts = postsFromJson(response.body);
-    return posts;
+    final List<PhotosModel> phto = postsFromJson(response.body);
+    return phto;
   } else {
     throw Exception("Failed to load posts");
   }

@@ -41,30 +41,28 @@ class _PostsViewState extends State<PostsView>
   Widget build(BuildContext context) {
     super.build(context);
     return Center(
-      child: Center(
-        child: loading == true
-            ? ListView.builder(
-                itemCount: postsList.length,
-                itemBuilder: (context, index) {
-                  PostsModel p = postsList[index];
-                  return Card(
-                    child: ListTile(
-                      title: Text(
-                        p.title,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black.withOpacity(0.8),
-                        ),
-                      ),
-                      subtitle: Text(
-                        p.body.replaceAll('\n', ' '),
+      child: loading == true
+          ? ListView.builder(
+              itemCount: postsList.length,
+              itemBuilder: (context, index) {
+                PostsModel p = postsList[index];
+                return Card(
+                  child: ListTile(
+                    title: Text(
+                      p.title,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black.withOpacity(0.8),
                       ),
                     ),
-                  );
-                },
-              )
-            : CircularProgressIndicator(),
-      ),
+                    subtitle: Text(
+                      p.body.replaceAll('\n', ' '),
+                    ),
+                  ),
+                );
+              },
+            )
+          : CircularProgressIndicator(),
     );
   }
 
