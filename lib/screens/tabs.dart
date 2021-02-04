@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../views/photo_views.dart';
 import '../views/posts_views.dart';
 
 class Tabs extends StatelessWidget {
@@ -40,7 +41,7 @@ class Tabs extends StatelessWidget {
         body: TabBarView(
           children: [
             PostsView(),
-            Icon(Icons.image_outlined),
+            PhotoView(),
             Icon(Icons.account_circle_outlined),
           ],
         ),

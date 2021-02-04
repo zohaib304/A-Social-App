@@ -39,6 +39,7 @@ class _PostsViewState extends State<PostsView>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Center(
       child: Center(
         child: loading == true
@@ -46,9 +47,19 @@ class _PostsViewState extends State<PostsView>
                 itemCount: postsList.length,
                 itemBuilder: (context, index) {
                   PostsModel p = postsList[index];
-                  return ListTile(
-                    title: Text(p.title),
-                    subtitle: Text(p.body),
+                  return Card(
+                    child: ListTile(
+                      title: Text(
+                        p.title,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black.withOpacity(0.8),
+                        ),
+                      ),
+                      subtitle: Text(
+                        p.body.replaceAll('\n', ' '),
+                      ),
+                    ),
                   );
                 },
               )
