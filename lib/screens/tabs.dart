@@ -46,6 +46,14 @@ class Tabs extends StatelessWidget {
             UserView(),
           ],
         ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.pinkAccent,
+          tooltip: "Add New Post",
+          child: Icon(
+            Icons.add,
+          ),
+          onPressed: () {},
+        ),
       ),
     );
   }
