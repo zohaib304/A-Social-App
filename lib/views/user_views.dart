@@ -78,16 +78,5 @@ class UserList extends StatelessWidget {
         );
       },
     );
-    // return Container(
-    //   child: GridView.builder(
-    //     gridDelegate:
-    //         SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-    //     itemCount: users.length,
-    //     itemBuilder: (context, index) {
-    //       final x = users[index];
-    //       return Text(x.company.bs);
-    //     },
-    //   ),
-    // );
   }
 }
